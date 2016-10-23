@@ -1,4 +1,7 @@
-cypherText = open('text.txt')
+import sys
+import binascii
+
+cypherText = open('cyphertext.txt')
 
 examples = cypherText.readlines()       #import 10 lines of cypher code
 
@@ -9,6 +12,11 @@ asciiText   = []
 binText     = []
 xorED       = []
 xorHEX      = []
+xorSOL      = []
+
+
+##___________________________xor messages__________________________##
+
 
 for j in range(len(examples)) :         #get rid of '\n'
     if j< 9 :
@@ -26,14 +34,45 @@ xorED.sort()                            #get rid of duplicates
 xorED = xorED[10::2]
 
 
-#for k in range(len(examples)) :         #hex to ascii
-#    asciiText.append(''.join(chr(int(examples[k][i:i+2],16)) for i in range(0,len(examples),2)))
-
-xorHEX = xorED[:]
-
-for i in range(len(xorHEX)):
-    xorHEX[i] = hex(xorHEX[i])
+for i in range(len(xorED)):
+    xorED[i] = hex(xorED[i])
     
+##___________________________Decoding_____________________________##
 
+guess 	= []
+xorTRY	= []
+
+
+guess 	= input("Try which word?")
+xorGUESS= str(b,'ascii') 
+xorTRY	= binascii.hexlify(guess)
+
+for i in range(len(xorED)):			#fill guesses to whoe line
+	if len(xorTry) < len(xorED[i]):
+		while(len(xorED)>len(guess):	
+			guess.append(guess)
+
+for i in range(len(xorED)):
+	xorSOL = xorTRY ^ xor 
+
+
+
+
+
+
+##___________________________fileausgabe__________________________##
+
+
+for k in range(len(xorSOL)) :         #hex to ascii
+    asciiText.append(''.join(chr(int(xorSOL[k][i:i+2],16)) for i in 
+range(0,len(xorSOL),2)))
+
+
+
+
+outTXT = open("output.txt" , "w") 
+for i in asciiText:
+	outTXT.write(i + "\n")
+outTXT.close()
 
 

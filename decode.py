@@ -47,13 +47,13 @@ guess 	= input("Try which word?")
 xorGUESS= str(b,'ascii') 
 xorTRY	= binascii.hexlify(guess)
 
-for i in range(len(xorED)):			#fill guesses to whoe line
-	if len(xorTry) < len(xorED[i]):
-		while(len(xorED)>len(guess):	
+for i in range(len(xorED)):			#fill guesses to whole line
+	if len(xorTRY) < len(xorED[i]):
+		while(len(xorED) > len(guess)):	
 			guess.append(guess)
 
 for i in range(len(xorED)):
-	xorSOL = xorTRY ^ xor 
+	xorSOL = xorTRY ^ xorED 
 
 
 

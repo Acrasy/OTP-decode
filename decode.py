@@ -22,9 +22,6 @@ for j in range(len(examples)) :         #get rid of '\n'
     if j< 9 :
         examples[j]=examples[j][0:-2]
 
-#for k in range(len(examples)) :         #convert to binary
-#    h_size = len(examples[k]) * 4
-#    binText.append(bin(int(examples[k],16))[2:].zfill(h_size))
 
 for i in range(len(examples)) :         #xor every message
     for j in range(len(examples)) :

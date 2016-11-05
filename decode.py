@@ -61,8 +61,8 @@ for i in range(len(xorED)):
 
 
 for k in range(len(xorSOL)) :         #hex to ascii
-    asciiText.append(''.join(chr(int(xorSOL[k][i:i+2],16)) for i in 
-range(0,len(xorSOL),2)))
+    asciiText.append(''.join(chr(int(xorSOL[k][i:i+2],16)) 
+	# for i in range(0,len(xorSOL),2)))
 
 
 
